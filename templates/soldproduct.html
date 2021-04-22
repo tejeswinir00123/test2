@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>List</title>  
+</head>  
+<body>  
+<table border=5>
+    <thead>  
+        <td>Product Id</td>  
+        <td>Product Name</td>  
+        <td>Product price</td>  
+        <td>Product details</td> 
+		<td>Product Quantity</td>
+		<td>Purchase Price</td>
+		<td>Product Sold Quantity</td>
+		<td>Purchase Selling price</td>
+		<td>Total sold price</td>
+    </thead>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td>{{row["product_id"]}}</td>  
+            <td>{{row["product_name"]}}</td>  
+            <td>{{row["product_price"]}}</td>  
+            <td>{{row["product_details"]}}</td>  
+			<td>{{row["product_quantity"]}}</td> 
+			<td>{{row["purchase_price"]}}</td> 
+			<td>{{row["product_soldquantity"]}}</td> 
+			<td>{{row["product_sellprice"]}}</td>
+           <td>{{row["soldprice"]}}</td> 			
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<a href="/">Go back to home page</a>  
+  
+  
+</body>  
+</html>  

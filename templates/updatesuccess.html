@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>
+Success
+</title>
+<body>
+<h2>Product quantity updated successfully</h2>
+<table border=5>
+    <thead>  
+        <td>Product Id</td>  
+        <td>Product Name</td>  
+        <td>Product price</td>  
+        <td>Product details</td> 
+		<td>Product Quantity</td>
+		<td>Purchase Price</td>
+    </thead>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td>{{row["product_id"]}}</td>  
+            <td>{{row["product_name"]}}</td>  
+            <td>{{row["product_price"]}}</td>  
+            <td>{{row["product_details"]}}</td>  
+			<td>{{row["product_quantity"]}}</td> 
+			<td>{{row["purchase_price"]}}</td> 			
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+<a href="/">Go back to home page</a>
+</body>
+</html>

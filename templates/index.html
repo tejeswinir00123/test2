@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>home</title>  
+</head>  
+<body>  
+    <h2>Hi, Welcome to ECart for buying and selling</h2>  
+	<table border=5>  
+    <thead>  
+        <td>Product ID</td>  
+        <td>Product Name</td>  
+        <td>Product Price</td>  
+        <td>Product Details</td>  
+    </thead>  
+      
+    {% for row in rows %}  
+      
+        <tr>  
+            <td>{{row["product_id"]}}</td>  
+            <td>{{row["product_name"]}}</td>  
+            <td>{{row["product_price"]}}</td>  
+            <td>{{row["product_details"]}}</td>  			
+        </tr>  
+      
+    {% endfor %}  
+</table>  
+    <a href="/add">Buy product</a><br><br>  
+    <a href ="/view">View the products purchased</a><br><br>  
+    <a href="/delete">Delete the purchased product</a><br><br>  
+</body>  
+</html>  
